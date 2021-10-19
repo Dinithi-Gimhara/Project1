@@ -7,6 +7,8 @@ require_once "./config.php";
 
 class Auth extends Database
 {
+
+    /*
     //register new user
     public function registerAuth($username, $password, $position)
     {
@@ -16,9 +18,11 @@ class Auth extends Database
         return true;
     }
 
+    */
 
 
-    /*
+
+ 
 
    //register new user for admin diniiiiiiiii
 
@@ -27,10 +31,10 @@ class Auth extends Database
     {
         $sql = "INSERT INTO systemusers(empId, name, gender, userRole, department, email, mobile, address, username, password) VALUES (:empId, :name, :gender, :userRole, :department, :email, :mobile, :address, :username,:password)";
         $statement = $this->conn->prepare($sql);
-        $statement->execute(['empId' => $empId, 'name' => $name, 'gender' => $gender, 'userRole' => $userRole, 'department' => $department, 'email' => $email, 'mobile' => $mobile, 'address' => $address, 'username' => $username, 'password' => $password);
+        $statement->execute(['empId' => $empId, 'name' => $name, 'gender' => $gender, 'userRole' => $userRole, 'department' => $department, 'email' => $email, 'mobile' => $mobile, 'address' => $address, 'username' => $username, 'password' => $password]);
         return true;
     }
-   */
+
 
 
    
@@ -38,7 +42,7 @@ class Auth extends Database
     //check user already registered
     public function userExist($username)
     {
-        $sql = "SELECT username FROM users WHERE username = :username";
+        $sql = "SELECT username FROM systemusers WHERE username = :username";
         $statement = $this->conn->prepare($sql);
         $statement->execute(['username' => $username]);
         $result =      $statement->fetch(PDO::FETCH_ASSOC);

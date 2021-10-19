@@ -224,14 +224,14 @@
       </div>
 
      
-
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
       
     <script>
         function myFunction() {
           location.replace("index.php?Page=userRole.php")
         }
 
-/*
+
 
 ///Newly addedddddddddd
         $(document).ready(function() {
@@ -243,7 +243,7 @@
                     $("#register").val("Please Wait.....");
                     //Ajax request
                     $.ajax({
-                        url: "assets/action.php",
+                        url: "../../assets/action.php",
                         method: "post",
                         //grab data from form
                         data: $("#register-form").serialize() + "&action=register",
@@ -258,7 +258,7 @@
             
         });
 
-        */
+      
    
         </script>
 </body>
